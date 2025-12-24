@@ -1,0 +1,10 @@
+import{a as m}from"./chunk-E74HD7ZH.js";import{a as p}from"./chunk-MA2BSSBY.js";import"./chunk-WDFO7N5M.js";import"./chunk-5ZYAOFQ7.js";import"./chunk-K3CWKDKA.js";import"./chunk-63LEK57F.js";import{Ab as t,Db as s,ab as a,gb as r}from"./chunk-BC3YC3AF.js";import"./chunk-W23ILHFO.js";var l={name:"Noise",description:"Gaussian noise generator",kernel:"ts.noise",out:["channels","sampleRate"],mode:"generator",type:"generator"},d={name:"Time Series",description:"Visualization de la serie temporal",kernel:"ts.plot",mode:"consumer",type:"visualization",params:[{label:"labels",default:void 0}]},c={name:"Normalize",description:"Normaliza la se\xF1al de entrada al rango [0, 1]",kernel:"ts.normalizeNode",mode:"transformer",type:"transformer"};var u={name:"Normalization",description:"Normalizes input signals",kernel:"wasm.min_max_normalize",tooltip:`Scales input signals to fit within a specified range using min-max normalization.
+
+Examples:
+- Range [0,1]: Scales data between 0 and 1
+- Range [-1,1]: Centers data around 0
+- Range [0,255]: Scales to image range
+
+Formula: y = (x - x_min) * (max - min)/(x_max - x_min) + min
+
+Note: Input data is scaled based on its current minimum and maximum values.`,params:[],controls:[{type:"input",label:"min",value:0,min:-255,max:255},{type:"input",label:"max",value:100,min:-255,max:255}],out:["std"],mode:"transformer",type:"transformer"};var g=class o{constructor(i){this.breadcrumbService=i;this.breadcrumbService.setBreadcrumbs([{label:"Home",url:"/home"},{label:"Pipelines",url:"/app/pipelines"}])}nodes=[{id:"node1",x:0,y:0,node:l},{id:"node4",x:400,y:400,node:u},{id:"node2",x:400,y:200,node:d},{id:"node3",x:400,y:0,node:c}];edges=[{from:"node1.output",to:"node4.input"}];edgesArgs=[];static \u0275fac=function(e){return new(e||o)(a(m))};static \u0275cmp=r({type:o,selectors:[["app-pipelines"]],decls:1,vars:3,consts:[["width","5000px","height","100%",3,"nodes","edges","edgesArgs"]],template:function(e,n){e&1&&s(0,"app-pipeline-controller",0),e&2&&t("nodes",n.nodes)("edges",n.edges)("edgesArgs",n.edgesArgs)},dependencies:[p],encapsulation:2})};export{g as PipelinesComponent};
